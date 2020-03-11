@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: tomato;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav {
+    width: 90vw;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    height: 70px;
+}
+
+li {
+    width: 20%;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li:hover {
+    animation: menu_animate 1s linear forwards;
+}
+
+
+/* animation menu
+- souligne => li 
+- change color => a 
+- zoom et dézoom => a
+- vague => span lettre
+*/
+
+@keyframes menu_animate {
+    100% {
+        border-bottom: 2px white solid;
+    }
+}
+
+
+/* li:hover a {
+    animation: menu_link_animate 1s forwards;
+} */
+
+@keyframes menu_link_animate {
+    50% {
+        font-size: 1.3em;
+    }
+    100% {
+        font-size: 1em;
+    }
+}
+
+.wave_link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.wave_item .wave_link span {
+    display: block;
+}
+
+.wave_item:hover .wave_link .wavin_span0 {
+    animation: wave 700ms forwards;
+}
+
+.wave_item:hover .wave_link .wavin_span1 {
+    animation: wave 700ms 100ms forwards;
+}
+
+.wave_item:hover .wave_link .wavin_span2 {
+    animation: wave 700ms 200ms forwards;
+}
+
+.wave_item:hover .wave_link .wavin_span3 {
+    animation: wave 700ms 300ms forwards;
+}
+
+.wave_item:hover .wave_link .wavin_span4 {
+    animation: wave 700ms 400ms forwards;
+}
+
+.wave_item:hover .wave_link .wavin_span5 {
+    animation: wave 700ms 500ms forwards;
+}
+
+.wave_item:hover .wave_link .wavin_span6 {
+    animation: wave 700ms 600ms forwards;
+}
+
+@keyframes wave {
+    50% {
+        margin-bottom: 10px;
+    }
+    100% {
+        margin-bottom: 0;
+    }
+}
+
+nav>ul>li>a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    text-transform: uppercase;
+}
+
+section {
+    background-color: rgb(170, 170, 248);
+    margin: 50px;
+}
+
+.logo_img {
+    max-height: 40px;
+}
+
+article {
+    border: 2px #008080 solid;
+}
+
+.article_img {
+    max-width: 50%;
+    margin-left: 25%;
+}
+
+.icon_test {
+    font-size: 15px;
+}
+
+.fab {
+    font-size: 100px;
+    color: blueviolet;
+}
